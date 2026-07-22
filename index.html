@@ -30,6 +30,7 @@
     min-height: 100vh;
   }
 
+  /* ── Ambient glow ── */
   .ambient {
     position: fixed;
     inset: 0;
@@ -40,6 +41,7 @@
       radial-gradient(ellipse 40% 30% at 100% 80%,  rgba(0,71,255,0.08) 0%, transparent 60%);
   }
 
+  /* ── Grain ── */
   .grain {
     position: fixed;
     inset: 0;
@@ -49,6 +51,7 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
+  /* ── Decorative lines (scroll with page) ── */
   .lines {
     position: absolute;
     top: 0; left: 0;
@@ -60,6 +63,7 @@
     filter: blur(1.5px);
   }
 
+  /* ── Layout ── */
   .wrap {
     position: relative;
     z-index: 2;
@@ -68,6 +72,7 @@
     padding: 0 28px;
   }
 
+  /* ── Header ── */
   header {
     display: flex;
     align-items: center;
@@ -83,6 +88,7 @@
     color: var(--white);
   }
 
+  /* ── Star logo ── */
   .star-wrap {
     position: relative;
     width: 72px;
@@ -99,6 +105,7 @@
     z-index: 2;
   }
 
+  /* ── Hero ── */
   .hero {
     padding: 96px 0 0;
     display: flex;
@@ -154,6 +161,7 @@
     color: rgba(244, 244, 244, 0.38);
   }
 
+  /* ── Socials ── */
   .socials {
     display: flex;
     gap: 14px;
@@ -180,6 +188,7 @@
 
   .socials svg { width: 16px; height: 16px; }
 
+  /* ── Form ── */
   .form-area {
     margin-top: 36px;
     width: 100%;
@@ -256,6 +265,7 @@
     .btn-sub { width: 100%; padding: 15px; }
   }
 
+  /* ── Divider ── */
   .divider {
     width: 100%;
     height: 1px;
@@ -263,6 +273,7 @@
     margin: 80px 0 0;
   }
 
+  /* ── Story ── */
   .story {
     padding: 64px 0 80px;
   }
@@ -307,6 +318,7 @@
     font-weight: 700;
   }
 
+  /* ── CTA final ── */
   .cta-final {
     margin-top: 56px;
     padding-top: 40px;
@@ -324,6 +336,7 @@
 
   .cta-final p span { color: var(--blue-soft); }
 
+  /* ── Footer ── */
   footer {
     padding: 0 0 48px;
     text-align: center;
@@ -335,11 +348,13 @@
   footer a { color: var(--grey-dim); text-decoration: none; transition: color 0.2s; }
   footer a:hover { color: var(--white); }
 
+  /* ── Reduced motion ── */
   @media (prefers-reduced-motion: reduce) {
     .hero-star svg { animation: none; filter: drop-shadow(0 0 20px rgba(0,71,255,0.6)); }
     html { scroll-behavior: auto; }
   }
 
+  /* ── Animaciones de entrada ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(22px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -374,6 +389,7 @@
     }
   }
 
+  /* ── Niebla cinematográfica ── */
   .fog {
     position: fixed;
     inset: 0;
@@ -421,6 +437,7 @@
     100% { transform: translateX(-6%)  scaleY(0.98); opacity: 0.85; }
   }
 
+  /* ── Canvas de partículas ── */
   #particles {
     position: fixed;
     inset: 0;
@@ -444,6 +461,8 @@
 </div>
 <canvas id="particles" aria-hidden="true"></canvas>
 
+
+<!-- Decorative lines: absolute, scroll with content -->
 <svg class="lines anim-lines" viewBox="0 0 600 1600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
   <defs>
     <linearGradient id="lw1" x1="0" y1="0" x2="1" y2="0">
@@ -462,10 +481,13 @@
       <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
     </linearGradient>
   </defs>
+  <!-- Top curve — amber side, now white -->
   <path d="M -60 140 C 100 80, 200 260, 460 200 S 700 60, 680 20"
         stroke="url(#lw1)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Mid curve — blue side, now white -->
   <path d="M 660 780 C 500 820, 440 980, 260 960 S 20 820, -40 880"
         stroke="url(#lw2)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Bottom curve -->
   <path d="M -40 1340 C 120 1280, 200 1460, 400 1440 S 640 1340, 680 1380"
         stroke="url(#lw3)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
 </svg>
@@ -479,6 +501,7 @@
     <span class="wordmark">Mooxion</span>
   </header>
 
+  <!-- ── HERO ── -->
   <section class="hero">
 
     <div class="hero-star anim-logo" role="img" aria-label="Logo Mooxion — estrella de cuatro puntas">
@@ -527,6 +550,7 @@
 
   <div class="divider anim-divider"></div>
 
+  <!-- ── STORY ── -->
   <section class="story anim-story">
 
     <p class="story-label">La historia</p>
@@ -548,6 +572,7 @@
     <div class="cta-final">
       <p>Si quieres acompañarme en esto, <span>ya sabes dónde suscribirte.</span><br>Si no, nos vemos en el canal.</p>
 
+      <!-- Second form -->
       <form id="kit-form-2">
         <input
           type="email"
@@ -574,7 +599,7 @@
     <a href="https://www.instagram.com/mooxioon/" target="_blank" rel="noopener">Instagram</a>
   </footer>
 
-</div>
+</div><!-- /wrap -->
 
 <script>
   async function submitToKit(email, statusEl, btnEl, originalLabel) {
@@ -631,6 +656,7 @@
   });
 </script>
 
+
 <script>
 (function() {
   const canvas = document.getElementById('particles');
@@ -665,18 +691,23 @@
         p.y = H + 10;
         p.alpha = Math.random() * 0.35 + 0.05;
       }
+
+      // Fade in y out suave en base a life
       const t = p.life;
       const fade = t < 0.15 ? t / 0.15 : t > 0.8 ? (1 - t) / 0.2 : 1;
+
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(255,255,255,${p.alpha * fade})`;
       ctx.fill();
+
       p.x += p.vx;
       p.y += p.vy;
     });
     requestAnimationFrame(draw);
   }
 
+  // Respetar prefers-reduced-motion
   const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (!mq.matches) {
     resize();
@@ -686,110 +717,5 @@
   }
 })();
 </script>
-</body>
-</html><!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mooxion</title>
-
-  <!-- MAILERLITE STYLES -->
-  <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1776858");</style>
-
-  <!-- GENERAL STYLES -->
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .container {
-      max-width: 500px;
-      width: 100%;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 16px;
-      margin-bottom: 30px;
-      color: #444;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-
-    <h1>Mooxion</h1>
-    <p>Suscríbete para recibir contenido exclusivo directamente en tu email.</p>
-
-    <!-- 🔥 MAILERLITE FORM START -->
-    <div id="mlb2-40278794" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-40278794">
-      <div class="ml-form-align-center">
-        <div class="ml-form-embedWrapper embedForm">
-
-          <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-
-            <form class="ml-block-form"
-              action="https://assets.mailerlite.com/jsonp/2226334/forms/185466399700813719/subscribe"
-              method="post"
-              target="_blank">
-
-              <div class="ml-form-formContent">
-
-                <div class="ml-form-fieldRow ml-last-item">
-                  <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-
-                    <input type="email"
-                      name="fields[email]"
-                      placeholder="Tu email"
-                      required
-                      style="padding:12px; width:100%; border:1px solid #ccc; border-radius:6px;">
-
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="ml-form-embedSubmit">
-                <button type="submit"
-                  style="margin-top:10px; padding:12px; width:100%; background:black; color:white; border:none; border-radius:6px; cursor:pointer;">
-                  Suscribirme
-                </button>
-              </div>
-
-              <input type="hidden" name="ml-submit" value="1">
-              <input type="hidden" name="anticsrf" value="true">
-
-            </form>
-
-          </div>
-
-          <div class="ml-form-successBody row-success" style="display:none">
-            <h2>¡Gracias!</h2>
-            <p>Te has suscrito correctamente.</p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!-- 🔥 MAILERLITE FORM END -->
-
-  </div>
-
 </body>
 </html>
