@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Sistema de 7 Días — Mooxion</title>
+<meta name="description" content="Un documento que nadie conocía. Siete días para convertirte en un maestro de la edición de vídeo. Suscríbete y desbloquéalo gratis.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 2 C50 2,56 38,98 50 C56 62,50 98,50 98 C50 98,44 62,2 50 C44 38,50 2,50 2Z' fill='%23F4F4F4'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<meta property="og:title" content="El Sistema de 7 Días — Mooxion">
+<meta property="og:description" content="Siete documentos que nadie conocía. Conviértete en un maestro de la edición de vídeo.">
+<meta property="og:type" content="website">
+</head>
+<body>
+<div class="bg-aura"></div>
+<div class="bg-grain"></div>
+
+<header class="topbar">
+  <a class="brand" href="https://www.mooxion.com">
+    <svg class="star" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 C50 2,56 38,98 50 C56 62,50 98,50 98 C50 98,44 62,2 50 C44 38,50 2,50 2Z" fill="#F4F4F4"/></svg>
+    <span>Mooxion</span>
+  </a>
+  <a class="back" href="https://www.mooxion.com">← Volver a la web</a>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="horizon"></div>
+
+    <div class="hero-star fade">
+      <div class="glow"></div>
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50 2 C50 2,56 38,98 50 C56 62,50 98,50 98 C50 98,44 62,2 50 C44 38,50 2,50 2Z" fill="#F4F4F4"/></svg>
+    </div>
+
+    <p class="kicker fade d1">Un documento que nadie conocía</p>
+    <h1 class="display fade d1">El sistema de <br>7 días.</h1>
+    <p class="lead fade d2">Encontré una web con siete documentos escondidos. Cada día entrena una habilidad de la edición de vídeo, y cada habilidad se apoya en la anterior. Al terminar, editas <strong>como un maestro</strong>.</p>
+
+    <div class="gate-card fade d3">
+      <div class="lock">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        Acceso gratuito
+      </div>
+      <h2>Desbloquea los 7 documentos</h2>
+      <p>Déjame tu email y entras directamente a la biblioteca completa. Es mi regalo para los que no se rinden.</p>
+
+      <form id="mx-form" class="ck-form" novalidate>
+        <input id="mx-email" type="email" name="email_address" placeholder="tu@email.com" required autocomplete="email" aria-label="Tu email">
+        <button id="mx-submit" type="submit" class="btn">Entrar a los 7 documentos</button>
+      </form>
+
+      <p id="mx-msg" class="form-msg" role="status" aria-live="polite"></p>
+      <p class="gate-note">Sin spam. Te unes al diario de Mooxion y puedes salir cuando quieras.</p>
+    </div>
+
+    <div class="hero-foot fade d4">
+      <span>6 documentos abiertos</span>
+      <span class="dot"></span>
+      <span>1 aún bloqueado</span>
+    </div>
+  </section>
+
+  <section class="gate-strip">
+    <div class="wide">
+      <h3>Lo que vas a desbloquear</h3>
+      <p class="sub">Siete días. Siete habilidades. No te saltes ninguno: cada uno construye sobre el anterior.</p>
+      <div class="mini-days">
+        <div class="mini-day"><div class="n">Día 1</div><div class="t">Empatía</div></div>
+        <div class="mini-day"><div class="n">Día 2</div><div class="t">Música</div></div>
+        <div class="mini-day"><div class="n">Día 3</div><div class="t">Cortes</div></div>
+        <div class="mini-day"><div class="n">Día 4</div><div class="t">A-Roll / B-Roll</div></div>
+        <div class="mini-day"><div class="n">Día 5</div><div class="t">Dinamismo</div></div>
+        <div class="mini-day"><div class="n">Día 6</div><div class="t">Storytelling</div></div>
+        <div class="mini-day locked"><div class="n">Día 7</div><div class="t">Aún no…</div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  © 2026 Mooxion · El sistema de 7 días
+  <div class="fl">
+    <a href="https://www.youtube.com/@Mooxion" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.instagram.com/mooxioon/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var KIT_ENDPOINT = 'https://app.kit.com/forms/9731252/subscriptions';
+  var DESTINO = (location.protocol === 'file:') ? 'documentos/index.html' : 'documentos/';
+
+  var form = document.getElementById('mx-form');
+  var email = document.getElementById('mx-email');
+  var boton = document.getElementById('mx-submit');
+  var msg = document.getElementById('mx-msg');
+
+  function aviso(texto, tipo) {
+    msg.textContent = texto;
+    msg.className = 'form-msg ' + (tipo || '');
+  }
+
+  function entrar() {
+    try { localStorage.setItem('mx7d', '1'); } catch (e) {}
+    window.location.href = DESTINO;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var valor = (email.value || '').trim();
+    if (!valor || valor.indexOf('@') < 1 || valor.indexOf('.') < 0) {
+      aviso('Escribe un email válido para poder entrar.', 'err');
+      email.focus();
+      return;
+    }
+
+    boton.disabled = true;
+    boton.textContent = 'Abriendo…';
+    aviso('');
+
+    var datos = new FormData();
+    datos.append('email_address', valor);
+
+    var fallo = setTimeout(entrar, 6000);
+
+    fetch(KIT_ENDPOINT, {
+      method: 'POST',
+      body: datos,
+      headers: { 'Accept': 'application/json' }
+    }).then(function () {
+      clearTimeout(fallo);
+      aviso('¡Dentro! Abriendo la biblioteca…', 'ok');
+      setTimeout(entrar, 500);
+    }).catch(function () {
+      clearTimeout(fallo);
+      entrar();
+    });
+  });
+})();
+</script>
+</body>
+</html>
