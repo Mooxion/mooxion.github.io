@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mooxion — Área exclusiva</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080808;
+    --blue: #0047FF;
+    --blue-soft: #4D8EFF;
+    --white: #F4F4F4;
+    --grey-dim: #888888;
+    --grey-line: rgba(244,244,244,0.09);
+    --code: SFXMOOXION;
+  }
+  *,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* ── Ambient ── */
+  .ambient {
+    position: fixed; inset:0; z-index:0; pointer-events:none;
+    background:
+      radial-gradient(ellipse 55% 40% at 50% -5%, rgba(0,71,255,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 30% at 100% 80%, rgba(0,71,255,0.08) 0%, transparent 60%);
+  }
+  .grain {
+    position:fixed; inset:0; z-index:1; pointer-events:none; opacity:0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .fog { position:fixed; inset:0; z-index:1; pointer-events:none; overflow:hidden; }
+  .fog-layer {
+    position:absolute; width:220%; height:100%;
+    background:
+      radial-gradient(ellipse 70% 55% at 20% 70%, rgba(255,255,255,0.11) 0%, transparent 65%),
+      radial-gradient(ellipse 55% 45% at 75% 25%, rgba(255,255,255,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 35% at 50% 50%, rgba(255,255,255,0.04) 0%, transparent 55%);
+    animation: fog-drift 26s ease-in-out infinite alternate;
+    filter: blur(18px);
+  }
+  .fog-layer-2 {
+    position:absolute; width:220%; height:100%;
+    background:
+      radial-gradient(ellipse 65% 50% at 70% 75%, rgba(255,255,255,0.09) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 60% at 15% 30%, rgba(255,255,255,0.06) 0%, transparent 65%);
+    animation: fog-drift-2 36s ease-in-out infinite alternate;
+    filter: blur(24px);
+  }
+  @keyframes fog-drift {
+    0%   { transform: translateX(-10%) scaleY(1.02); opacity:0.6; }
+    50%  { transform: translateX(-3%)  scaleY(1.08); opacity:1; }
+    100% { transform: translateX(-2%)  scaleY(1.04); opacity:0.75; }
+  }
+  @keyframes fog-drift-2 {
+    0%   { transform: translateX(0%)   scaleY(1.06); opacity:0.5; }
+    50%  { transform: translateX(-8%)  scaleY(1.02); opacity:0.95; }
+    100% { transform: translateX(-6%)  scaleY(0.98); opacity:0.85; }
+  }
+  #particles { position:fixed; inset:0; z-index:1; pointer-events:none; opacity:0.5; }
+
+  /* Líneas decorativas */
+  .lines {
+    position:absolute; top:0; left:0; width:100%; height:2400px;
+    pointer-events:none; z-index:0; opacity:0.07; filter:blur(1.5px);
+  }
+
+  /* ── PANTALLA DE ACCESO ── */
+  #gate {
+    position:fixed; inset:0; z-index:100;
+    background: var(--bg);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding: 24px;
+  }
+  .gate-star {
+    width:64px; height:64px; margin-bottom:28px;
+    filter: drop-shadow(0 0 18px rgba(0,71,255,0.7));
+    animation: star-breathe 3.5s ease-in-out infinite;
+  }
+  @keyframes star-breathe {
+    0%,100% { filter: drop-shadow(0 0 16px rgba(0,71,255,0.6)); }
+    50%      { filter: drop-shadow(0 0 28px rgba(77,142,255,0.9)) drop-shadow(0 0 60px rgba(0,71,255,0.4)); }
+  }
+  .gate-title {
+    font-size: 13px; font-weight:700; letter-spacing:0.16em;
+    text-transform:uppercase; color: var(--blue-soft); margin-bottom:10px;
+  }
+  .gate-sub {
+    font-size: 22px; font-weight:800; letter-spacing:-0.02em;
+    color: var(--white); margin-bottom:8px; text-align:center;
+  }
+  .gate-hint {
+    font-size:13px; color: var(--grey-dim); margin-bottom:32px; text-align:center;
+  }
+  .gate-form { display:flex; flex-direction:column; gap:12px; width:100%; max-width:340px; }
+  .gate-input {
+    background: rgba(244,244,244,0.05);
+    border: 1.5px solid var(--grey-line);
+    border-radius:9px; padding:15px 18px;
+    font-family:'Montserrat',sans-serif; font-size:15px; font-weight:600;
+    color: var(--white); outline:none; text-align:center; letter-spacing:0.08em;
+    transition: border-color .2s, background .2s;
+    text-transform:uppercase;
+  }
+  .gate-input::placeholder { color: var(--grey-dim); font-weight:400; letter-spacing:0.02em; text-transform:none; }
+  .gate-input:focus { border-color: var(--blue); background: rgba(0,71,255,0.07); }
+  .gate-btn {
+    background: var(--blue); color: var(--white); border:none; border-radius:9px;
+    padding:15px; font-family:'Montserrat',sans-serif; font-weight:700;
+    font-size:14px; letter-spacing:0.06em; text-transform:uppercase; cursor:pointer;
+    transition: background .2s, transform .15s, box-shadow .2s;
+  }
+  .gate-btn:hover { background: var(--blue-soft); transform:translateY(-1px); box-shadow:0 8px 22px -6px rgba(0,71,255,0.55); }
+  .gate-error {
+    font-size:12px; color:#ff6b6b; text-align:center; min-height:16px; font-weight:600;
+  }
+
+  /* ── LAYOUT PRINCIPAL ── */
+  .wrap { position:relative; z-index:2; max-width:700px; margin:0 auto; padding:0 28px; }
+
+  header {
+    display:flex; align-items:center; gap:11px; padding:36px 0 0;
+    animation: fadeIn 0.6s ease both;
+  }
+  .wordmark { font-size:15px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; }
+  .header-badge {
+    margin-left:auto; font-size:10px; font-weight:700; letter-spacing:0.12em;
+    text-transform:uppercase; color: var(--blue-soft);
+    background: rgba(0,71,255,0.1); border:1px solid rgba(0,71,255,0.25);
+    border-radius:20px; padding:4px 12px;
+  }
+
+  /* ── LOGO PORTALÁPICES ANIMADO ── */
+  .pencil-hero {
+    padding: 80px 0 0;
+    display:flex; flex-direction:column; align-items:center; text-align:center;
+    animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.2s both;
+  }
+
+  .holder-wrap {
+    position:relative; width:200px; height:220px; margin-bottom:36px;
+  }
+
+  /* El portalápices cilíndrico */
+  .holder-cup {
+    position:absolute; bottom:0; left:50%; transform:translateX(-50%);
+    width:130px; height:80px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #111 100%);
+    border-radius:0 0 18px 18px;
+    border: 1px solid #2a2a2a;
+    overflow:hidden;
+  }
+  .holder-cup::before {
+    content:''; position:absolute; top:0; left:0; right:0; height:6px;
+    background: linear-gradient(90deg, transparent, var(--blue-soft), transparent);
+    opacity:0.6;
+  }
+  .holder-cup::after {
+    content:''; position:absolute; top:0; left:15%; right:15%; height:2px;
+    background: var(--blue); opacity:0.4;
+    box-shadow: 0 0 8px 2px rgba(0,71,255,0.4);
+  }
+
+  /* Cada lápiz */
+  .pencil {
+    position:absolute; bottom:60px;
+    width:22px; border-radius:3px 3px 0 0;
+    background: linear-gradient(180deg, #1e1e1e 0%, #141414 100%);
+    border: 1px solid #2e2e2e;
+    transform-origin: bottom center;
+    overflow:hidden;
+  }
+  /* Goma en la parte superior */
+  .pencil::before {
+    content:''; position:absolute; top:0; left:0; right:0; height:10px;
+    background: #1a1a1a; border-bottom:1px solid #333;
+  }
+  /* Punta */
+  .pencil::after {
+    content:''; position:absolute; bottom:-8px; left:50%; transform:translateX(-50%);
+    border-left:5px solid transparent; border-right:5px solid transparent;
+    border-top:8px solid #222;
+  }
+
+  /* Waveform SVG dentro de cada lápiz */
+  .pencil-wave {
+    position:absolute; top:14px; left:0; right:0; bottom:0;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .pencil-wave svg { width:16px; }
+
+  /* Posiciones y ángulos de los 5 lápices — abanico */
+  .p1 { height:110px; left:calc(50% - 56px); transform:rotate(-22deg); animation: fall-in 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.5s both; }
+  .p2 { height:125px; left:calc(50% - 30px); transform:rotate(-11deg); animation: fall-in 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.65s both; }
+  .p3 { height:138px; left:calc(50% - 11px); transform:rotate(0deg);   animation: fall-in 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.8s both; }
+  .p4 { height:125px; left:calc(50% + 19px); transform:rotate(11deg);  animation: fall-in 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.95s both; }
+  .p5 { height:110px; left:calc(50% + 35px); transform:rotate(22deg);  animation: fall-in 0.7s cubic-bezier(0.34,1.56,0.64,1) 1.1s both; }
+
+  @keyframes fall-in {
+    from { opacity:0; transform-origin:bottom center; filter:blur(4px); bottom:200px; }
+  }
+
+  /* Waveform animaciones por tipo */
+  .wv { animation: wv-generic 1.3s ease-in-out infinite; }
+  /* Whoosh: ondas que se expanden de izquierda a derecha */
+  .wv-whoosh rect { animation: wv-whoosh-bar 1.4s ease-in-out infinite; }
+  .wv-whoosh rect:nth-child(1) { animation-delay:0s;    animation-duration:1.6s; }
+  .wv-whoosh rect:nth-child(2) { animation-delay:0.1s;  animation-duration:1.3s; }
+  .wv-whoosh rect:nth-child(3) { animation-delay:0.2s;  animation-duration:1.1s; }
+  .wv-whoosh rect:nth-child(4) { animation-delay:0.3s;  animation-duration:0.9s; }
+  .wv-whoosh rect:nth-child(5) { animation-delay:0.35s; animation-duration:0.7s; }
+  @keyframes wv-whoosh-bar { 0%,100%{transform:scaleY(0.15);opacity:0.4} 50%{transform:scaleY(1);opacity:1} }
+
+  /* Riser: barras que crecen progresivamente */
+  .wv-riser rect { animation: wv-riser-bar 2s ease-in-out infinite; }
+  .wv-riser rect:nth-child(1) { animation-delay:0s;    transform-origin:bottom; }
+  .wv-riser rect:nth-child(2) { animation-delay:0.15s; transform-origin:bottom; }
+  .wv-riser rect:nth-child(3) { animation-delay:0.3s;  transform-origin:bottom; }
+  .wv-riser rect:nth-child(4) { animation-delay:0.45s; transform-origin:bottom; }
+  .wv-riser rect:nth-child(5) { animation-delay:0.6s;  transform-origin:bottom; }
+  @keyframes wv-riser-bar { 0%,100%{transform:scaleY(0.1);opacity:0.3} 50%{transform:scaleY(1);opacity:1} }
+
+  /* Ambient: sinusoide suave constante */
+  .wv-ambient { animation: wv-ambient-drift 3s ease-in-out infinite; }
+  @keyframes wv-ambient-drift { 0%,100%{opacity:0.5;transform:translateY(1px)} 50%{opacity:1;transform:translateY(-1px)} }
+
+  /* Click: pico único que parpadea */
+  .wv-click { animation: wv-click-blink 1.8s ease-in-out infinite; }
+  @keyframes wv-click-blink {
+    0%,85%,100%{opacity:0.2;transform:scaleY(0.2)}
+    5%,10%{opacity:1;transform:scaleY(1)}
+  }
+
+  /* Impact: pico grande que decae */
+  .wv-impact { animation: wv-impact-decay 2s ease-in-out infinite; }
+  @keyframes wv-impact-decay {
+    0%{opacity:1;transform:scaleX(1) scaleY(1)}
+    5%{opacity:0.9;transform:scaleX(1.1) scaleY(1.05)}
+    40%{opacity:0.3;transform:scaleX(0.4) scaleY(0.3)}
+    100%{opacity:0.1;transform:scaleX(0.1) scaleY(0.1)}
+  }
+
+  /* ── HERO TEXT ── */
+  .hero-eyebrow {
+    font-size:12px; font-weight:700; letter-spacing:0.18em;
+    text-transform:uppercase; color: var(--blue-soft); margin-bottom:16px;
+    animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 1.3s both;
+  }
+  .hero-title {
+    font-size: clamp(2rem,5.5vw,3rem); font-weight:800; line-height:1.08;
+    letter-spacing:-0.025em; margin-bottom:16px;
+    animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 1.45s both;
+  }
+  .hero-title em { font-style:normal; color:rgba(244,244,244,0.38); }
+  .hero-sub {
+    font-size:16px; line-height:1.65; color:rgba(244,244,244,0.65);
+    max-width:520px; margin-bottom:0;
+    animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 1.6s both;
+  }
+
+  /* ── DIVISOR ── */
+  .divider {
+    width:100%; max-width:700px; height:1px; background: var(--grey-line);
+    margin: 72px auto 0;
+    animation: fadeIn 0.8s ease 2s both;
+  }
+
+  /* ── SECCIÓN ── */
+  .section { padding: 64px 0 0; max-width: 700px; margin-left: auto; margin-right: auto; }
+  .section-label {
+    font-size:11px; font-weight:700; letter-spacing:0.2em;
+    text-transform:uppercase; color: var(--blue-soft); margin-bottom:32px;
+    display:flex; align-items:center; gap:12px;
+    max-width: 700px;
+  }
+  .section-label::after { content:''; flex:1; height:1px; background: var(--grey-line); }
+  .section-title {
+    font-size:clamp(1.5rem,4vw,2.1rem); font-weight:800; letter-spacing:-0.02em;
+    line-height:1.15; margin-bottom:12px;
+  }
+  .section-desc {
+    font-size:15px; line-height:1.65; color:rgba(244,244,244,0.6); margin-bottom:28px;
+  }
+
+  /* ── PROMPT IA ── */
+
+
+
+
+
+
+  /* ── SECCIÓN VIDEO ── */
+  .video-card {
+    border:1px solid var(--grey-line); border-radius:14px; overflow:hidden;
+    background: rgba(244,244,244,0.02);
+    max-width: 700px;
+  }
+  .video-placeholder {
+    aspect-ratio:16/9; background: #0d0d0d;
+    max-height: 400px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:16px; position:relative; overflow:hidden;
+  }
+  .video-placeholder::before {
+    content:''; position:absolute; inset:0;
+    background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(0,71,255,0.08) 0%, transparent 70%);
+  }
+  .video-play-icon {
+    width:60px; height:60px; border-radius:50%;
+    border:2px solid rgba(244,244,244,0.15);
+    display:flex; align-items:center; justify-content:center;
+    position:relative; z-index:1;
+  }
+  .video-play-icon svg { width:20px; height:20px; margin-left:3px; }
+  .video-soon {
+    font-size:13px; font-weight:700; letter-spacing:0.14em;
+    text-transform:uppercase; color: var(--grey-dim); position:relative; z-index:1;
+  }
+  .video-sub-soon {
+    font-size:12px; color:rgba(244,244,244,0.3); position:relative; z-index:1;
+  }
+  .video-meta {
+    padding:16px 20px; display:flex; align-items:center; justify-content:space-between;
+    border-top:1px solid var(--grey-line);
+  }
+  .video-meta-title { font-size:14px; font-weight:700; color: var(--white); }
+  .video-meta-sub { font-size:12px; color: var(--grey-dim); margin-top:2px; }
+  .video-badge {
+    font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+    color: var(--blue-soft); background: rgba(0,71,255,0.1);
+    border:1px solid rgba(0,71,255,0.2); border-radius:20px; padding:4px 12px;
+    white-space:nowrap;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 64px 0 48px; text-align:center;
+    font-size:12px; color: var(--grey-dim); letter-spacing:0.04em;
+  }
+  footer a { color: var(--grey-dim); text-decoration:none; transition:color .2s; }
+  footer a:hover { color: var(--white); }
+
+  /* ── ANIMACIONES ENTRADA ── */
+  @keyframes fadeUp {
+    from { opacity:0; transform:translateY(22px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity:0; } to { opacity:1; }
+  }
+
+  .anim-s1 { animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 1.8s both; }
+  .anim-s2 { animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 2.0s both; }
+  .anim-s3 { animation: fadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 2.2s both; }
+
+  @media (prefers-reduced-motion:reduce) {
+    *, *::before, *::after { animation:none !important; }
+  }
+  @media (max-width:480px) {
+    .holder-wrap { width:160px; height:180px; }
+    .p1,.p2,.p3,.p4,.p5 { width:18px; }
+    .p1 { left:calc(50% - 46px); height:90px; }
+    .p2 { left:calc(50% - 24px); height:102px; }
+    .p3 { left:calc(50% - 9px);  height:114px; }
+    .p4 { left:calc(50% + 15px); height:102px; }
+    .p5 { left:calc(50% + 28px); height:90px; }
+    .holder-cup { width:110px; }
+  }
+
+  /* ── Copiar prompt ── */
+  .prompt-copy-wrap {
+    margin-top: 16px;
+    max-width: 700px;
+  }
+
+  .prompt-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: 1px solid var(--grey-line);
+    border-radius: 8px;
+    padding: 10px 16px;
+    color: var(--grey-dim);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: border-color .2s, color .2s;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .prompt-toggle:hover { border-color: rgba(244,244,244,0.2); color: var(--white); }
+
+  .prompt-toggle-left { display: flex; align-items: center; gap: 8px; }
+
+  .toggle-arrow {
+    width: 14px; height: 14px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+  .toggle-arrow.open { transform: rotate(180deg); }
+
+  .prompt-preview {
+    margin-top: 8px;
+    border: 1px solid var(--grey-line);
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+  .prompt-preview.open { max-height: 600px; }
+
+  .prompt-preview-inner {
+    padding: 16px 18px;
+    font-size: 12px;
+    line-height: 1.75;
+    color: rgba(244,244,244,0.55);
+    font-family: 'Montserrat', sans-serif;
+    white-space: pre-wrap;
+    max-height: 560px;
+    overflow-y: auto;
+    background: rgba(244,244,244,0.02);
+  }
+  .prompt-preview-inner::-webkit-scrollbar { width: 3px; }
+  .prompt-preview-inner::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+
+  .copy-btn {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: rgba(0,71,255,0.08);
+    border: 1px solid rgba(0,71,255,0.3);
+    border-radius: 8px;
+    padding: 12px;
+    color: var(--blue-soft);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .2s, border-color .2s, color .2s, transform .15s;
+  }
+  .copy-btn:hover {
+    background: rgba(0,71,255,0.15);
+    border-color: rgba(0,71,255,0.55);
+    color: var(--white);
+    transform: translateY(-1px);
+  }
+  .copy-btn.copied {
+    background: rgba(0,71,255,0.2);
+    border-color: var(--blue-soft);
+    color: var(--white);
+  }
+  .copy-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+</style>
+</head>
+<body>
+
+<!-- PANTALLA DE ACCESO -->
+<div id="gate">
+  <svg class="gate-star" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <path d="M50 2 C50 2,56 38,98 50 C56 62,50 98,50 98 C50 98,44 62,2 50 C44 38,50 2,50 2Z" fill="#F4F4F4"/>
+  </svg>
+  <p class="gate-title">Área exclusiva</p>
+  <p class="gate-sub">Pack de efectos de sonido</p>
+  <p class="gate-hint">Introduce el código que encontrarás en tu compra</p>
+  <div class="gate-form">
+    <input class="gate-input" id="gate-input" type="text" placeholder="Tu código de acceso" autocomplete="off" spellcheck="false">
+    <button class="gate-btn" id="gate-btn" onclick="checkCode()">Acceder</button>
+    <p class="gate-error" id="gate-error"></p>
+  </div>
+</div>
+
+<div class="ambient"></div>
+<div class="grain"></div>
+<div class="fog" aria-hidden="true">
+  <div class="fog-layer"></div>
+  <div class="fog-layer-2"></div>
+</div>
+<canvas id="particles" aria-hidden="true"></canvas>
+
+<!-- Líneas decorativas -->
+<svg class="lines" viewBox="0 0 660 2400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="lw1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="40%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="lw2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path d="M -60 180 C 120 100, 200 320, 480 260 S 720 100, 700 60" stroke="url(#lw1)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 720 980 C 560 1020, 500 1180, 280 1160 S 20 1020, -40 1080" stroke="url(#lw2)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M -40 1900 C 120 1840, 200 2020, 400 2000 S 640 1900, 680 1940" stroke="url(#lw1)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+</svg>
+
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header>
+    <svg width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M50 2 C50 2,56 38,98 50 C56 62,50 98,50 98 C50 98,44 62,2 50 C44 38,50 2,50 2Z" fill="#F4F4F4"/>
+    </svg>
+    <span class="wordmark">Mooxion</span>
+    <span class="header-badge">Compradores SFX</span>
+  </header>
+
+  <!-- HERO CON PORTALÁPICES -->
+  <section class="pencil-hero">
+
+    <div class="holder-wrap" role="img" aria-label="Portalápices con cinco lápices: whoosh, riser, ambient, click e impact">
+
+      <!-- P1: WHOOSH — barras acelerando de izquierda a derecha -->
+      <div class="pencil p1">
+        <div class="pencil-wave">
+          <svg viewBox="0 0 16 40" xmlns="http://www.w3.org/2000/svg" class="wv-whoosh">
+            <rect x="0"  y="30" width="2" height="4"  rx="1" fill="#4D8EFF" style="transform-origin:center 32px"/>
+            <rect x="3"  y="26" width="2" height="8"  rx="1" fill="#4D8EFF" style="transform-origin:center 30px"/>
+            <rect x="6"  y="20" width="2" height="14" rx="1" fill="#4D8EFF" style="transform-origin:center 27px"/>
+            <rect x="9"  y="14" width="2" height="20" rx="1" fill="#4D8EFF" style="transform-origin:center 24px"/>
+            <rect x="12" y="8"  width="2" height="26" rx="1" fill="#0047FF" style="transform-origin:center 21px"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- P2: RISER — barras que crecen escalonadamente -->
+      <div class="pencil p2">
+        <div class="pencil-wave">
+          <svg viewBox="0 0 16 40" xmlns="http://www.w3.org/2000/svg" class="wv-riser">
+            <rect x="0"  y="36" width="2" height="4"  rx="1" fill="#4D8EFF" style="transform-origin:bottom"/>
+            <rect x="3"  y="30" width="2" height="10" rx="1" fill="#4D8EFF" style="transform-origin:bottom"/>
+            <rect x="6"  y="22" width="2" height="18" rx="1" fill="#4D8EFF" style="transform-origin:bottom"/>
+            <rect x="9"  y="14" width="2" height="26" rx="1" fill="#4D8EFF" style="transform-origin:bottom"/>
+            <rect x="12" y="6"  width="2" height="34" rx="1" fill="#0047FF" style="transform-origin:bottom"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- P3: AMBIENT — sinusoide suave -->
+      <div class="pencil p3">
+        <div class="pencil-wave">
+          <svg viewBox="0 0 16 40" xmlns="http://www.w3.org/2000/svg" class="wv-ambient">
+            <path d="M 0 20 Q 2 14, 4 20 Q 6 26, 8 20 Q 10 14, 12 20 Q 14 26, 16 20" stroke="#4D8EFF" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <path d="M 0 26 Q 2 20, 4 26 Q 6 32, 8 26 Q 10 20, 12 26 Q 14 32, 16 26" stroke="#0047FF" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- P4: CLICK — pico único y agudo -->
+      <div class="pencil p4">
+        <div class="pencil-wave">
+          <svg viewBox="0 0 16 40" xmlns="http://www.w3.org/2000/svg" class="wv-click" style="transform-origin:center">
+            <line x1="8" y1="38" x2="8" y2="2"  stroke="#4D8EFF" stroke-width="2" stroke-linecap="round"/>
+            <line x1="5" y1="30" x2="5" y2="10" stroke="#4D8EFF" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+            <line x1="11" y1="30" x2="11" y2="10" stroke="#4D8EFF" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- P5: IMPACT — pico explosivo que decae -->
+      <div class="pencil p5">
+        <div class="pencil-wave">
+          <svg viewBox="0 0 16 40" xmlns="http://www.w3.org/2000/svg" class="wv-impact" style="transform-origin:center 20px">
+            <line x1="8"  y1="2"  x2="8"  y2="38" stroke="#0047FF" stroke-width="3" stroke-linecap="round"/>
+            <line x1="4"  y1="8"  x2="4"  y2="32" stroke="#4D8EFF" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+            <line x1="12" y1="8"  x2="12" y2="32" stroke="#4D8EFF" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+            <line x1="1"  y1="16" x2="1"  y2="24" stroke="#4D8EFF" stroke-width="1" stroke-linecap="round" opacity="0.35"/>
+            <line x1="15" y1="16" x2="15" y2="24" stroke="#4D8EFF" stroke-width="1" stroke-linecap="round" opacity="0.35"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="holder-cup"></div>
+    </div>
+
+    <p class="hero-eyebrow">Solo para ti · Gracias por confiar</p>
+    <h1 class="hero-title">Tu arsenal de sonido.<br><em>Listo para usar.</em></h1>
+    <p class="hero-sub">Esto no lo ve nadie más. Como parte de tu compra tienes acceso a dos regalos: el prompt para detectar Risers e Impacts en cualquier IA, y un tutorial exclusivo donde te muestro exactamente cómo diseño el sonido de mis vídeos.</p>
+
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SECCIÓN 1: PROMPT IA -->
+  <section class="section anim-s1">
+    <p class="section-label">Regalo 01 · Prompt</p>
+    <h2 class="section-title">El prompt para detectar Risers e Impacts</h2>
+    <p class="section-desc">Copia el prompt de aquí abajo, pégalo en ChatGPT, Claude o la IA que tengas, añade tu guion al final y en segundos sabrás exactamente dónde van los Risers y los Impacts.</p>
+
+
+    <div class="prompt-copy-wrap">
+      <button class="prompt-toggle" id="prompt-toggle" onclick="togglePromptPreview()">
+        <span class="prompt-toggle-left">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+          </svg>
+          Usar el prompt en otra IA
+        </span>
+        <svg class="toggle-arrow" id="toggle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </button>
+
+      <div class="prompt-preview" id="prompt-preview">
+        <div class="prompt-preview-inner" id="prompt-preview-text"></div>
+      </div>
+
+      <button class="copy-btn" id="copy-btn" onclick="copyPrompt()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="copy-icon">
+          <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+        <span id="copy-label">Copiar prompt al portapapeles</span>
+      </button>
+    </div>
+
+  </section>
+
+  <div class="divider" style="margin-top:56px;"></div>
+
+  <!-- SECCIÓN 2: VIDEO -->
+  <section class="section anim-s2">
+    <p class="section-label">Regalo 02 · Tutorial</p>
+    <h2 class="section-title">Cómo diseño el sonido de mis vídeos</h2>
+    <p class="section-desc">Un tutorial donde te muestro mi proceso completo, en tiempo real, sin cortes ni edición. Exactamente lo que uso en cada vídeo del canal.</p>
+
+    <div class="video-card">
+      <!-- ═══════════════════════════════════════════════════
+           CUANDO TENGAS EL VIDEO:
+           1. Sube el archivo .mp4 a la misma carpeta que este HTML
+           2. Borra las líneas de video-placeholder (hasta </div> de abajo)
+           3. Descomenta el bloque <video> de abajo cambiando "tutorial.mp4"
+              por el nombre exacto de tu archivo
+           ════════════════════════════════════════════════════ -->
+
+      <!-- <video controls style="width:100%;display:block;border-radius:14px 14px 0 0;" poster="">
+             <source src="tutorial.mp4" type="video/mp4">
+             Tu navegador no soporta vídeo HTML5.
+           </video> -->
+
+      <div class="video-placeholder">
+        <div class="video-play-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="color:#F4F4F4;opacity:0.4">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+        <p class="video-soon">Próximamente</p>
+        <p class="video-sub-soon">El tutorial se publicará pronto</p>
+      </div>
+      <div class="video-meta">
+        <div>
+          <p class="video-meta-title">Diseño de sonido: proceso completo</p>
+          <p class="video-meta-sub">Tutorial exclusivo para compradores</p>
+        </div>
+        <span class="video-badge">Pronto</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" style="margin-top:56px;"></div>
+
+  <footer class="anim-s3">
+    © 2026 Mooxion &nbsp;·&nbsp;
+    <a href="https://www.youtube.com/@Mooxion" target="_blank" rel="noopener">YouTube</a>
+    &nbsp;·&nbsp;
+    <a href="https://www.instagram.com/mooxioon/" target="_blank" rel="noopener">Instagram</a>
+    &nbsp;·&nbsp;
+    <a href="https://mooxion.com" target="_blank" rel="noopener">Volver al canal</a>
+  </footer>
+
+</div><!-- /wrap -->
+
+<script>
+// ── ACCESO POR CÓDIGO ──
+const ACCESS_CODE = 'SFXMOOXION'; // Cámbialo cuando quieras
+
+function checkCode() {
+  const input = document.getElementById('gate-input').value.trim().toUpperCase();
+  const error = document.getElementById('gate-error');
+  if (input === ACCESS_CODE) {
+    const gate = document.getElementById('gate');
+    gate.style.transition = 'opacity 0.6s ease';
+    gate.style.opacity = '0';
+    setTimeout(() => { gate.style.display = 'none'; }, 600);
+  } else {
+    error.textContent = 'Código incorrecto. Revisa tu correo de compra.';
+    document.getElementById('gate-input').style.borderColor = '#ff6b6b';
+    setTimeout(() => {
+      error.textContent = '';
+      document.getElementById('gate-input').style.borderColor = '';
+    }, 3000);
+  }
+}
+
+document.getElementById('gate-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') checkCode();
+});
+
+// ── ANÁLISIS IA ──
+
+
+
+// ── TOGGLE Y COPIA DEL PROMPT ──
+const PROMPT_FOR_COPY = `Eres editor de vídeo especializado en diseño de sonido. Tu trabajo es leer un guion y localizar los momentos exactos donde colocar dos efectos de sonido: IMPACT y RISER. Nada más.
+
+═══════════════════════════════════════
+IMPACT — da peso
+═══════════════════════════════════════
+
+Subraya la palabra que importa. Se coloca SOBRE:
+· La palabra o cifra que lo cambia todo
+· El cierre de una idea o de un bloque
+· Un remate humorístico
+· La afirmación fuerte, no la explicación que viene después
+
+El IMPACT sí puede ir dentro de una frase. Va sobre la palabra concreta,
+normalmente al final: la cifra, el superlativo, el remate.
+Si dudas entre riser e impact y todo ocurre en una sola frase, es IMPACT.
+
+Va sobre la sílaba exacta, nunca al final de la frase entera.
+
+═══════════════════════════════════════
+RISER — LA REGLA DE LAS DOS FRASES
+═══════════════════════════════════════
+
+Un riser NO se coloca dentro de una frase. Se coloca ENTRE dos frases.
+
+Para que funcione hacen falta exactamente tres cosas, las tres:
+
+  FRASE A → prepara, anuncia, genera la pregunta. No resuelve nada.
+  CORTE   → el punto o la pausa entre las dos frases.
+  FRASE B → revela. Contiene la información nueva.
+
+El riser recorre la FRASE A y termina justo en el CORTE. La FRASE B entra
+en el silencio que deja. Ese silencio es lo que hace que la revelación pese.
+
+TEST DE TRES PREGUNTAS. Antes de marcar un riser, respóndelas.
+Si alguna es NO, descártalo.
+
+  1. ¿Son DOS frases separadas por un punto o una pausa clara?
+  2. ¿La segunda frase contiene información NUEVA que el espectador no
+     podía anticipar leyendo la primera?
+  3. Si borrara la segunda frase, ¿el espectador se quedaría con la
+     pregunta sin responder?
+
+═══════════════════════════════════════
+REGLAS INNEGOCIABLES
+═══════════════════════════════════════
+
+1. SÉ SELECTIVO. Un guion de 5 minutos rara vez necesita más de 4-6
+   impactos y 2-3 risers EN TOTAL. Ante la duda, no lo marques.
+
+2. Nunca dos impactos separados por menos de 8 palabras.
+
+3. Todo riser necesita resolución.
+
+4. El riser debe terminar justo donde empieza lo que anuncia, no después.
+
+═══════════════════════════════════════
+FORMATO DE SALIDA
+═══════════════════════════════════════
+
+Primero, la estructura del guion en 2-3 líneas.
+
+Después:
+
+  [IMPACT] "…fragmento literal del guion…"
+  Colocar: sobre la palabra "…"
+  Por qué: (una línea)
+
+  [RISER]
+  Frase A (prepara): "…texto literal…"
+  Frase B (revela):  "…texto literal…"
+  Test 1 (dos frases): SÍ
+  Test 2 (info nueva): SÍ — qué revela exactamente: …
+  Test 3 (queda colgando): SÍ
+
+Al final, una línea de control: cuántos impactos y cuántos risers has
+marcado, y cuántas palabras tiene el guion.
+
+[PEGA AQUÍ TU GUION]`;
+
+function togglePromptPreview() {
+  const preview = document.getElementById('prompt-preview');
+  const arrow   = document.getElementById('toggle-arrow');
+  const text    = document.getElementById('prompt-preview-text');
+
+  const isOpen = preview.classList.contains('open');
+  if (!isOpen) text.textContent = PROMPT_FOR_COPY;
+
+  preview.classList.toggle('open');
+  arrow.classList.toggle('open');
+}
+
+async function copyPrompt() {
+  const btn   = document.getElementById('copy-btn');
+  const label = document.getElementById('copy-label');
+  const icon  = document.getElementById('copy-icon');
+
+  try {
+    await navigator.clipboard.writeText(PROMPT_FOR_COPY);
+    btn.classList.add('copied');
+    label.textContent = '¡Copiado!';
+    icon.innerHTML = '<polyline points="20 6 9 17 4 12" stroke-linecap="round" stroke-linejoin="round"/>';
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      label.textContent = 'Copiar prompt al portapapeles';
+      icon.innerHTML = '<rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>';
+    }, 2500);
+  } catch {
+    label.textContent = 'Error — copia manualmente';
+    setTimeout(() => { label.textContent = 'Copiar prompt al portapapeles'; }, 3000);
+  }
+}
+
+// ── PARTÍCULAS ──
+(function() {
+  const canvas = document.getElementById('particles');
+  const ctx = canvas.getContext('2d');
+  let W, H, particles;
+  function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+  function createParticles() {
+    particles = Array.from({ length: 50 }, () => ({
+      x: Math.random() * W, y: Math.random() * H,
+      r: Math.random() * 1.1 + 0.2,
+      alpha: Math.random() * 0.3 + 0.05,
+      vx: (Math.random() - 0.5) * 0.18,
+      vy: -(Math.random() * 0.22 + 0.06),
+      life: Math.random(), speed: Math.random() * 0.003 + 0.001,
+    }));
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      p.life += p.speed;
+      if (p.life > 1) { p.life = 0; p.x = Math.random() * W; p.y = H + 10; }
+      const t = p.life;
+      const fade = t < 0.15 ? t / 0.15 : t > 0.8 ? (1 - t) / 0.2 : 1;
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(255,255,255,${p.alpha * fade})`; ctx.fill();
+      p.x += p.vx; p.y += p.vy;
+    });
+    requestAnimationFrame(draw);
+  }
+  const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (!mq.matches) {
+    resize(); createParticles(); draw();
+    window.addEventListener('resize', () => { resize(); createParticles(); });
+  }
+})();
+</script>
+
+</body>
+</html>
